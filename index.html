@@ -5,13 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CHTEC - Assistência Técnica Odontológica em Belo Horizonte. Manutenção, conserto e montagem de consultórios odontológicos desde 1996. Autorizada Gnatus, Schuster, Sirona e mais." />
   <meta name="keywords" content="assistência técnica odontológica, conserto equipamentos odontológicos, BH, Belo Horizonte, Gnatus, Schuster, Sirona, montagem consultório" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="canonical" href="https://www.chtec.com.br" />
   <title>CHTEC - Assistência Técnica Odontológica | Belo Horizonte</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
+  <link rel="apple-touch-icon" href="assets/images/logo.jpg" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="CHTEC - Assistência Técnica Odontológica" />
   <meta property="og:description" content="Desde 1996, referência em manutenção e suporte técnico para equipamentos odontológicos em BH e interior de MG." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.chtec.com.br" />
+  <meta property="og:image" content="https://www.chtec.com.br/assets/images/logo.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="CHTEC" />
+
+  <!-- Twitter / WhatsApp -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="CHTEC - Assistência Técnica Odontológica" />
+  <meta name="twitter:description" content="Desde 1996, referência em manutenção e suporte técnico para equipamentos odontológicos em BH e interior de MG." />
+  <meta name="twitter:image" content="https://www.chtec.com.br/assets/images/logo.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,6 +38,42 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org LocalBusiness (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "CHTEC - Assistência Técnica Odontológica",
+    "url": "https://www.chtec.com.br",
+    "logo": "https://www.chtec.com.br/assets/images/logo.jpg",
+    "image": "https://www.chtec.com.br/assets/images/logo.jpg",
+    "description": "Assistência técnica especializada em equipamentos odontológicos e oftalmológicos. Autorizada pelas principais marcas do mercado.",
+    "foundingDate": "1996",
+    "telephone": "+55-31-3225-1542",
+    "email": "chtec@chtec.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Paraíba, 1317, loja 18",
+      "addressLocality": "Belo Horizonte",
+      "addressRegion": "MG",
+      "postalCode": "30130-141",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -19.940277,
+      "longitude": -43.935083
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    "sameAs": ["https://www.instagram.com/c.h.tec"]
+  }
+  </script>
 </head>
 <body>
 
@@ -46,13 +98,14 @@
         <a href="#contato" class="nav__link nav__link--cta">Contato</a>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
   <!-- ======= HERO ======= -->
+  <main>
   <section class="hero" id="inicio">
     <div class="hero__bg"></div>
     <div class="container hero__content">
@@ -70,12 +123,12 @@
       </div>
       <div class="hero__stats">
         <div class="stat">
-          <strong>+28</strong>
+          <strong>+30</strong>
           <span>Anos de experiência</span>
         </div>
         <div class="stat">
           <strong>10+</strong>
-          <span>Marcas autorizadas</span>
+          <span>Marcas parceiras</span>
         </div>
         <div class="stat">
           <strong>BH</strong>
@@ -281,7 +334,7 @@
         <div class="sobre__image-placeholder">
           <div class="sobre__stats-grid">
             <div class="sobre__stat-item">
-              <strong><span>+</span>28</strong>
+              <strong><span>+</span>30</strong>
               <em>Anos de<br/>Experiência</em>
             </div>
             <div class="sobre__stat-item">
@@ -402,15 +455,15 @@
         <form class="contato__form" id="form-contato">
           <div class="form__group">
             <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required autocomplete="name" />
           </div>
           <div class="form__group">
             <label for="telefone">WhatsApp / Telefone *</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(31) 99999-9999" required />
+            <input type="tel" id="telefone" name="telefone" placeholder="(31) 99999-9999" required autocomplete="tel" />
           </div>
           <div class="form__group">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" />
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" />
           </div>
           <div class="form__group">
             <label for="equipamento">Equipamento / Marca</label>
@@ -442,6 +495,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ======= FOOTER ======= -->
   <footer class="footer">
     <div class="container footer__inner">
@@ -454,6 +509,7 @@
         <strong>Navegação</strong>
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
         <a href="#marcas">Marcas</a>
         <a href="#sobre">Sobre</a>
         <a href="#contato">Contato</a>
@@ -467,7 +523,7 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>&copy; 2025 CHTEC LTDA. Todos os direitos reservados. | Rua Paraíba, 1317 loja 18, Savassi, Belo Horizonte - MG, CEP 30130-141</p>
+      <p>&copy; 2026 CHTEC LTDA. Todos os direitos reservados. | Rua Paraíba, 1317 loja 18, Savassi, Belo Horizonte - MG, CEP 30130-141</p>
     </div>
   </footer>
 

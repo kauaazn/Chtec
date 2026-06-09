@@ -63,6 +63,20 @@ img { max-width: 100%; display: block; }
 a   { text-decoration: none; color: inherit; }
 ul  { list-style: none; }
 
+/* Tipografia mais equilibrada em títulos */
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+/* Respeitar preferência por menos animação */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
 /* --- Container --- */
 .container {
   max-width: 1200px;
