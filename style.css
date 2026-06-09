@@ -186,9 +186,12 @@ ul  { list-style: none; }
 }
 
 .header__logo img {
-  height: 44px;
+  height: 40px;
   width: auto;
   object-fit: contain;
+  background: var(--white);
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .logo-text-fallback {
@@ -941,9 +944,13 @@ ul  { list-style: none; }
 }
 
 .footer__brand img {
-  height: 42px;
+  height: 40px;
+  width: auto;
   margin-bottom: 10px;
   object-fit: contain;
+  background: var(--white);
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .footer__brand-name {
