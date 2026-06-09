@@ -475,22 +475,30 @@ h1, h2, h3 {
   transform: translateY(-4px);
 }
 
-/* Destaque — card escuro (não vermelho) */
+/* Destaque — card escuro com borda verde WhatsApp */
 .service-card--highlight {
-  background: var(--dark-2);
-  border-color: var(--dark-2);
+  background: var(--dark);
+  border: 1px solid rgba(255,255,255,.12);
+  border-top: 3px solid var(--green-whatsapp);
   color: var(--white);
 }
 
 .service-card--highlight:hover {
-  background: var(--dark-3);
-  border-color: var(--dark-3);
+  background: var(--dark-2);
+  border-color: rgba(255,255,255,.20);
+  border-top-color: var(--green-whatsapp);
   transform: translateY(-4px);
 }
 
-.service-card--highlight h3,
-.service-card--highlight p { color: var(--white); }
-.service-card--highlight p  { opacity: .75; }
+.service-card--highlight h3 {
+  color: var(--white);
+  font-size: 1.12rem;
+}
+
+.service-card--highlight p {
+  color: rgba(255,255,255,.85);
+  opacity: 1;
+}
 
 /* Ícone — fundo cinza neutro */
 .service-card__icon {
@@ -508,8 +516,8 @@ h1, h2, h3 {
 }
 
 .service-card--highlight .service-card__icon {
-  background: rgba(255,255,255,.1);
-  color: var(--white);
+  background: rgba(37,211,102,.18);
+  color: var(--green-whatsapp);
 }
 
 .service-card:not(.service-card--highlight):hover .service-card__icon {
@@ -914,13 +922,54 @@ h1, h2, h3 {
   color: var(--gray-400);
 }
 
-/* --- Mapa --- */
-.mapa {
-  border-radius: var(--radius);
-  overflow: hidden;
+/* --- Localização --- */
+.localizacao {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
   border: 1px solid var(--gray-200);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-top: 40px;
 }
+
+.localizacao > .fas {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.localizacao > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.localizacao strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.localizacao span {
+  font-size: .93rem;
+  color: var(--gray-600);
+}
+
+.localizacao a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: opacity var(--transition);
+}
+
+.localizacao a:hover { opacity: .75; }
 
 /* =============================================
    FOOTER
